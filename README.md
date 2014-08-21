@@ -8,7 +8,6 @@ Adapted from the following sources:
 * [PublishingWithWordpress Guide](http://publishingwithwordpress.com/installing-wordpress-digital-ocean/)
 
 
-
 1. If you don't have an SSH key added to your digitalocean account, add it before creating your droplet. SSH is much more robust against brute force password attacks, so you want to use SSH over password authentication.
   * On terminal on a Mac `$ cd /.ssh` then `$ ls` to check your folder's contents.
   * If you don't have the files `id_rsa` and `id_rsa.pub` in this folder, create them by `$ ssh-keygen -t rsa -C "YOU@YOUR-DOMAIN.com"`. When prompted for passphrase, hit enter for to *not* set a password. You should then see your key fingerprint (looks like a long MAC Address) and your key's randomart image. 
@@ -24,6 +23,7 @@ Adapted from the following sources:
   * Leave the "Settings" per defaults and "Create Droplet". Your root login password will be emailed to you.
   * Copy your IP Address from DigitalOcean to your clipboard
   * In your terminal do  `$ ssh root@[IP ADDRESS]`. If you get something like this:
+
     ```
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
@@ -39,7 +39,9 @@ Adapted from the following sources:
     RSA host key for [IP ADDRESS] has changed and you have requested strict checking.
     Host key verification failed.
     ```
+
     Delete the "offending" line from your `~/.ssh/known_hosts` file and then try again.
+
   * Now you should get something like this:
     ```
     The authenticity of host '[IP ADDRESS] ([IP ADDRESS])' can't be established.
