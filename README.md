@@ -15,7 +15,7 @@ Adapted from the following sources:
   * If you don't have the files `id_rsa` and `id_rsa.pub` in this folder, create them by `$ ssh-keygen -t rsa -C "YOU@YOUR-DOMAIN.com"`. When prompted for passphrase, hit enter for to *not* set a password. You should then see your key fingerprint (looks like a long MAC Address) and your key's randomart image. 
   * Copy the public key from here `$ cat ~/.ssh/id_rsa.pub`. 
   * In DigitalOcean, go to "SSH Keys" in the left panel and "Add SSH Key".
-  * Paste the key in and give your key a name (something like your first name and last initial). 
+  * Paste the key in and give your key a name (something like your first name and hostname). 
 
 2. With your SSH added to DO, you can now setup your Droplet.
   * "CREATE" a new droplet.
