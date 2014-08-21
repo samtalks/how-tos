@@ -9,7 +9,6 @@ Adapted from the following sources:
 
 
 
-
 1. If you don't have an SSH key added to your digitalocean account, add it before creating your droplet. SSH is much more robust against brute force password attacks, so you want to use SSH over password authentication.
   * On terminal on a Mac `$ cd /.ssh` then `$ ls` to check your folder's contents.
   * If you don't have the files `id_rsa` and `id_rsa.pub` in this folder, create them by `$ ssh-keygen -t rsa -C "YOU@YOUR-DOMAIN.com"`. When prompted for passphrase, hit enter for to *not* set a password. You should then see your key fingerprint (looks like a long MAC Address) and your key's randomart image. 
