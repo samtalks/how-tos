@@ -22,6 +22,7 @@ Adapted from the following sources:
   * Leave the "Settings" per defaults and "Create Droplet". 
   * Copy your IP Address from DigitalOcean to your clipboard
   * In your terminal do  `$ ssh root@[IP ADDRESS]`. If you get something like this:
+
     ```
     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
@@ -37,6 +38,7 @@ Adapted from the following sources:
     RSA host key for [IP ADDRESS] has changed and you have requested strict checking.
     Host key verification failed.
     ```
+
     Delete the "offending" line from your `~/.ssh/known_hosts` file and then try again.
   * Now you should get something like this:
     ```
