@@ -6,7 +6,7 @@ Adapted from the following sources:
 
 * [DO's one-click instructions (5/29/14)](https://www.digitalocean.com/community/tutorials/one-click-install-wordpress-on-ubuntu-14-04-with-digitalocean) 
 * [PublishingWithWordpress Guide](http://publishingwithwordpress.com/installing-wordpress-digital-ocean/)
-# [DO's locking down root passwords after SSH access](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets)
+* [DO's locking down root passwords after SSH access](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets)
 
 1. If you don't have an SSH key added to your digitalocean account, add it before creating your droplet. SSH is much more robust against brute force password attacks, so you want to use SSH over password authentication.
   * On terminal on a Mac `$ cd /.ssh` then `$ ls` to check your folder's contents.
@@ -61,6 +61,7 @@ Adapted from the following sources:
     /swapfile swap swap defaults 0 0
     #=> verify the swap file is active (should show 1GB free):
     $ free
+    ```
 4. Now to install Wordpress on your server. Note: If you want to set up your wordpress install with the correct hostname (by pointing your nameservers to this IP address to set up your hostname), you can do so now. Otherwise, you can do that later and go directly to the IP address for now.
   * Go to your hostname (or IP address) on your browser and enter "admin" and the password you copied onto your notepad from earlier to log in. Fill in the form, create WP credentials, and installation should be successful.
   * Log in using your new credentials. Voila.
