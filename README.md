@@ -71,7 +71,20 @@ Adapted from the following sources:
   * Go to your hostname (or IP address) on your browser and enter "admin" and the password you copied onto your notepad from earlier to log in. Fill in the form, create WP credentials, and installation should be successful.
   * Log in using your new credentials. Voila.
 5. You also have access to SQL in your SSH session. To access SQL during your SSH session, you can get your password by: `$ cat /root/.my.cnf` 
-
+6. Remove the "authentication.. restricted area" login window. 
+  * `$ nano /etc/apache2/apache2.conf`
+  * `CTRL` + ` W ` and search for "wp-admin".
+  * Put a "#" in front of every line below:
+    ```
+    <DirectoryMatch ^.*/wp-admin/>
+        AuthType Basic
+        AuthName "Please login to your droplet via SSH for login details."
+        AuthUserFile /etc/apache2/.htpasswd
+        Require valid-user
+    </DirectoryMatch>
+    ```
+  * Save and exit the file. 
+  * `$ service apache2 restart`  to restart the server. 
 
 #### Security clean up of logins and passwords.
 Once you're finished, at some point you will want to make your site more secure by eliminating passwords insecurely stored on your server, disabling password logins, etc. 
