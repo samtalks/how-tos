@@ -73,7 +73,14 @@ Adapted from the following sources:
 5. You also have access to SQL in your SSH session. To access SQL during your SSH session, you can get your password by: `$ cat /root/.my.cnf` 
 
 
-### Security clean up of logins and passwords.
+#### Security clean up of logins and passwords.
 Once you're finished, at some point you will want to make your site more secure by eliminating passwords insecurely stored on your server, disabling password logins, etc. 
 
 If you need to add SSH keys on a droplet already created, use [these instructions](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-digitalocean-droplets). 
+
+
+#### Personal Favorite plugins
+
+* [bbpress](https://wordpress.org/plugins/bbpress/)
+* [Simple custom CSS](https://wordpress.org/plugins/simple-custom-css/screenshots/) (Make sure to backup your css frequently)
+* [Mailchimp for wordpress](http://wordpress.org/plugins/mailchimp-for-wp/) (Don't mistake with other mailchimp plugins)
