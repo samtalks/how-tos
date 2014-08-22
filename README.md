@@ -55,7 +55,7 @@ Adapted from the following sources:
     ```
     #=> NOTE: The prompt on the server may show a hashtag # instead of dollar sign $ as on your machine. We'll keep using dollar sign notation.
     $ sudo apt-get update
-    $ sudo apt-get dist-upgrade       #=> "dist" also intelligently upgrades and removes files based on dependencies 
+    $ sudo apt-get upgrade       #=> "dist-" deals with dependencies but adds ~270MB 
     $ sudo a2enmod rewrite
     $ dd if=/dev/zero of=/swapfile bs=1M count=1024
     $ mkswap /swapfile
