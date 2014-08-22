@@ -18,7 +18,7 @@ Adapted from the following sources:
   * "CREATE" a new droplet.
   * Add your planned hostname (YOUR-DOMAIN.COM)
   * Select the default size, a region, and "Wordpress on Ubuntu 14.04" from the Application tab
-  * In "Add optional SSH Keys" click on your Key so that it turns from gray to blue. Doing this *should not* trigger DO to send you an email with the root login password - but this (along with the need for the password later) needs to be confirmed.  
+  * In "Add optional SSH Keys" click on your Key so that it turns from gray to blue. You will also no longer receive an email with the root login password.  
   * Leave the "Settings" per defaults and "Create Droplet". 
   * Copy your IP Address from DigitalOcean to your clipboard
   * In your terminal do  `$ ssh root@[IP ADDRESS]`. If you get something like this:
@@ -49,7 +49,6 @@ Adapted from the following sources:
     ```
 
     Type `yes`.
-  * You will be prompted for the password. Go to your email and copy the password that DigitalOcean sent you. Paste it into the terminal. Then change the password (and keep the records safely somewhere). 
   * Copy the wp-admin password that this pre-installation of Wordpress provides you and paste it into some notepad or somewhere. You will need this later.
 3. At this point, DigitalOcean's one-click instructions has you install Wordpress. We're not going to do that yet. PublishingWithWordpress' guide has some optimization instructions we'll do first. Not sure if this order is necessary, but the author does them first so we'll follow suit. While still in your SSH terminal session, do the following in order: 
 
