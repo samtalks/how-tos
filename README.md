@@ -48,6 +48,7 @@ Adapted from the following sources:
   * You will be prompted for the password. Go to your email and copy the password that DigitalOcean sent you. Paste it into the terminal. Then change the password (and keep the records safely somewhere). 
   * Copy the wp-admin password that this pre-installation of Wordpress provides you and paste it into some notepad or somewhere. You will need this later.
 3. At this point, DigitalOcean's one-click instructions has you install Wordpress. We're not going to do that yet. PublishingWithWordpress' guide has some optimization instructions we'll do first. Not sure if this order is necessary, but the author does them first so we'll follow suit. While still in your SSH terminal session, do the following in order: 
+
     ```
     #=> NOTE: The prompt on the server may show a hashtag # instead of dollar sign $ as on your machine. We'll keep using dollar sign notation.
     $ sudo apt-get update
@@ -62,6 +63,7 @@ Adapted from the following sources:
     #=> verify the swap file is active (should show 1GB free):
     $ free
     ```
+
 4. Now to install Wordpress on your server. Note: If you want to set up your wordpress install with the correct hostname (by pointing your nameservers to this IP address to set up your hostname), you can do so now. Otherwise, you can do that later and go directly to the IP address for now.
   * Go to your hostname (or IP address) on your browser and enter "admin" and the password you copied onto your notepad from earlier to log in. Fill in the form, create WP credentials, and installation should be successful.
   * Log in using your new credentials. Voila.
