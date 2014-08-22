@@ -64,7 +64,7 @@ Adapted from the following sources:
 4. Now to install Wordpress on your server. Note: If you want to set up your wordpress install with the correct hostname (by pointing your nameservers to this IP address to set up your hostname), you can do so now. Otherwise, you can do that later and go directly to the IP address for now.
   * Go to your hostname (or IP address) on your browser and enter "admin" and the password you copied onto your notepad from earlier to log in. Fill in the form, create WP credentials, and installation should be successful.
   * Log in using your new credentials. Voila.
-5. To access SQL during your SSH session, you can get your password by: `$ cat /root/.my.cnf` 
+5. You also have access to SQL in your SSH session. To access SQL during your SSH session, you can get your password by: `$ cat /root/.my.cnf` 
 
 
 ### Security clean up of logins and passwords.
