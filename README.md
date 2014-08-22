@@ -41,11 +41,13 @@ Adapted from the following sources:
 
     Delete the "offending" line from your `~/.ssh/known_hosts` file and then try again.
   * Now you should get something like this:
+
     ```
     The authenticity of host '[IP ADDRESS] ([IP ADDRESS])' can't be established.
     RSA key fingerprint is [LOOKS LIKE A LONG MAC ADDRESS].
     Are you sure you want to continue connecting (yes/no)? 
     ```
+
     Type `yes`.
   * You will be prompted for the password. Go to your email and copy the password that DigitalOcean sent you. Paste it into the terminal. Then change the password (and keep the records safely somewhere). 
   * Copy the wp-admin password that this pre-installation of Wordpress provides you and paste it into some notepad or somewhere. You will need this later.
