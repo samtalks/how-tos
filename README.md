@@ -75,6 +75,7 @@ Adapted from the following sources:
   * `$ nano /etc/apache2/apache2.conf`
   * `CTRL` + ` W ` and search for "wp-admin".
   * Put a "#" in front of every line below:
+
     ```
     <DirectoryMatch ^.*/wp-admin/>
         AuthType Basic
@@ -83,6 +84,7 @@ Adapted from the following sources:
         Require valid-user
     </DirectoryMatch>
     ```
+
   * Save and exit the file. 
   * `$ service apache2 restart`  to restart the server. 
 
