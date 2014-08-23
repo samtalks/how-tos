@@ -18,7 +18,7 @@ After installing Wordpress, install the following plugins and themes and activat
 * Create a topic with defaults selected except: nest it under the forum you just created above.
 
 #### Appearance (Widgets)
-  ##### bbPress widget
+  #### bbPress widget
   * Add the bbPress login widget at the top and title it something like "Forum Login" so that it works when both logged in or out. Leave other URIs blank.
   * Add a text widget immediately below with a blank title and the following code:
 
