@@ -19,6 +19,7 @@ Create a topic with defaults selected except: nest it under the forum you just c
 
 ### Appearance
 Add only two widgets to keep it as simple as possible.
+
 ##### Appearance (Widgets)
 * **Primary widget**
 
@@ -39,22 +40,22 @@ Add only two widgets to keep it as simple as possible.
 * Add a menu item for each of the pages you created. 
 
 ##### Appearance (Custom CSS)
-Add your custom CSS. Make sure you frequently save and version control (i.e., on Git) your ever changing CSS file since this plugin does not save versions or backups.
+* Add your custom CSS. Make sure you frequently save and version control (i.e., on Git) your ever changing CSS file since this plugin does not save versions or backups.
 
 ##### Appearance (Editor)
-This one is important. There is a bug with the bbpress plugin that allows Wordpress to highlight the wrong menu item when the forum sub-items and topics are selected. To fix this, add the following code at the bottom of the `ThemeFunctions` (`functions.php`) file. Make sure to substitute `'forum'`, `'topic'` and `'menu-item-16'` to whatever is correct. 
+* This one is important. There is a bug with the bbpress plugin that allows Wordpress to highlight the wrong menu item when the forum sub-items and topics are selected. To fix this, add the following code at the bottom of the `ThemeFunctions` (`functions.php`) file. Make sure to substitute `'forum'`, `'topic'` and `'menu-item-16'` to whatever is correct. 
 
-```php
-// THIS FIXES THE WRONG FORUM MENU ITEM HIGHLIGHTING
-add_filter( 'nav_menu_css_class', 'namespace_menu_classes', 10, 2 );
-function namespace_menu_classes( $classes , $item ){
-  	if ( get_post_type() == 'forum' || get_post_type() == 'topic' ) {
-    		$classes = str_replace( 'current_page_parent', '', $classes );
-    		$classes = str_replace( 'menu-item-16', 'current_page_parent', $classes );
-  	}
-  	return $classes;
-}
-```
+	```php
+	// THIS FIXES THE WRONG FORUM MENU ITEM HIGHLIGHTING
+	add_filter( 'nav_menu_css_class', 'namespace_menu_classes', 10, 2 );
+	function namespace_menu_classes( $classes , $item ){
+	  	if ( get_post_type() == 'forum' || get_post_type() == 'topic' ) {
+	    		$classes = str_replace( 'current_page_parent', '', $classes );
+	    		$classes = str_replace( 'menu-item-16', 'current_page_parent', $classes );
+	  	}
+	  	return $classes;
+	}
+	```
 
 ### Settings
 
@@ -75,28 +76,28 @@ Uncheck the following:
 * "Enable threaded (nested) comments..."
 
 ##### Settings (Media)
-Uncheck "Organize my uploads into months..."
+* Uncheck "Organize my uploads into months..."
 
 ##### Settings (Permalinks)
-Set to **Post Name**
+* Set to **Post Name**
 
 ##### Settings (Forums)
-Again, minimize barriers to participation for a new website. On same token, try to reduce the features to keep the UI as clean and simple as possible. So uncheck the following:
-* "Allow users to mark topics as favorites"
-* "Allow users to subscribe to forums and topics"
-* In **Forum Root Slug**, uncheck "Prefix all forum content with the forum root slug". This prevents the "Home/Forums/Forum/..." redundancy in the breadcrumbs.
+* Again, minimize barriers to participation for a new website. On same token, try to reduce the features to keep the UI as clean and simple as possible. So uncheck the following:
+	* "Allow users to mark topics as favorites"
+	* "Allow users to subscribe to forums and topics"
+	* In **Forum Root Slug**, uncheck "Prefix all forum content with the forum root slug". This prevents the "Home/Forums/Forum/..." redundancy in the breadcrumbs.
 
 ### Mailchimp for WP
 
 ##### Mailchimp settings
-First create a Mailchimp account, create a list, add then return to Wordpress admin site to add the API.  
+* First create a Mailchimp account, create a list, add then return to Wordpress admin site to add the API.  
 
 ##### Forms
-```html
-<p>
-	<label for="mc4wp_email">Email address: </label>
-	<input type="email" id="mc4wp_email" name="EMAIL" placeholder="email address" required />
-<input type="submit" value="Sign up" />
-</p>
-```
+	```html
+	<p>
+		<label for="mc4wp_email">Email address: </label>
+		<input type="email" id="mc4wp_email" name="EMAIL" placeholder="email address" required />
+	<input type="submit" value="Sign up" />
+	</p>
+	```
 
