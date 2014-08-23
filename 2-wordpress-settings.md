@@ -93,11 +93,12 @@ Uncheck the following:
 * First create a Mailchimp account, create a list, add then return to Wordpress admin site to add the API.  
 
 ##### Forms
-	```
-	<p>
-		<label for="mc4wp_email">Email address: </label>
-		<input type="email" id="mc4wp_email" name="EMAIL" placeholder="email address" required />
-	<input type="submit" value="Sign up" />
-	</p>
-	```
+* Add the below:
+```
+<p>
+	<label for="mc4wp_email">Email address: </label>
+	<input type="email" id="mc4wp_email" name="EMAIL" placeholder="email address" required />
+<input type="submit" value="Sign up" />
+</p>
+```
 
