@@ -94,12 +94,12 @@ Uncheck the following:
 
 ##### Forms
 * Add the below:
-	```
-	<p>
-		<label for="mc4wp_email">Email address: </label>
-		<input type="email" id="mc4wp_email" name="EMAIL" placeholder="email address" required />
-	<input type="submit" value="Sign up" />
-	</p>
-	```
+  ```
+  <p>
+  	<label for="mc4wp_email">Email address: </label>
+  	<input type="email" id="mc4wp_email" name="EMAIL" placeholder="email address" required />
+  <input type="submit" value="Sign up" />
+  </p>
+  ```
 
 [more to come]
