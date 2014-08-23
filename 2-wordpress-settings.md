@@ -43,7 +43,7 @@ Add only two widgets to keep it as simple as possible.
 * Add your custom CSS. Make sure you frequently save and version control (i.e., on Git) your ever changing CSS file since this plugin does not save versions or backups.
 
 ##### Appearance (Editor)
-* This one is important. There is a bug with the bbpress plugin that allows Wordpress to highlight the wrong menu item when the forum sub-items and topics are selected. To fix this, add the following code at the bottom of the `ThemeFunctions` (`functions.php`) file. Make sure to substitute `'forum'`, `'topic'` and `'menu-item-16'` to whatever is correct. 
+* This one is important. There is a bug with the bbpress plugin that allows Wordpress to highlight the wrong menu item when the forum sub-items and topics are selected. To fix this, add the following code at the bottom of the `ThemeFunctions` (`functions.php`) file. Make sure to substitute `'forum'`, `'topic'` and `'menu-item-16'` in the first script to whatever is correct. 
 
 	```php
 	// THIS FIXES THE WRONG FORUM MENU ITEM HIGHLIGHTING
@@ -55,6 +55,17 @@ Add only two widgets to keep it as simple as possible.
 	  	}
 	  	return $classes;
 	}
+
+	// THIS REMOVES WORDPRESS LOGO FROM REGISTER PAGE
+	
+	function my_login_logo() { ?>
+	    <style type="text/css">
+	        body.login div#login h1 a {
+	            display: none;
+	        }
+	    </style>
+	<?php }
+	add_action( 'login_enqueue_scripts', 'my_login_logo' );
 	```
 
 ### Settings
