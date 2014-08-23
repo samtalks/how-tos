@@ -18,13 +18,14 @@ After installing Wordpress, install the following plugins and themes and activat
 * Create a topic with defaults selected except: nest it under the forum you just created above.
 
 #### Appearance (Widgets)
-
   ##### bbPress widget
   * Add the bbPress login widget at the top and title it something like "Forum Login" so that it works when both logged in or out. Leave other URIs blank.
   * Add a text widget immediately below with a blank title and the following code:
+
     ```html
     <a href="http://[YOUR DOMAIN]/wp-login.php?action=register">Create a login account here</a><br>
     ```
+
   * Add the Mailchimp signup form widget and name it something like "Join our Newsletter"
   
   #### Primary widget
@@ -39,6 +40,7 @@ After installing Wordpress, install the following plugins and themes and activat
 
 #### Appearance (Editor)
 * This one is important. There is a bug with the bbpress plugin that allows Wordpress to highlight the wrong menu item when the forum sub-items and topics are selected. To fix this, add the following code at the bottom of the `ThemeFunctions` (`functions.php`) file.
+
   ```php
   // THIS FIXES THE WRONG FORUM MENU ITEM HIGHLIGHTING
   add_filter( 'nav_menu_css_class', 'namespace_menu_classes', 10, 2 );
