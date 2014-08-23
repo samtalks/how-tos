@@ -20,7 +20,7 @@ After installing Wordpress, install the following plugins and themes and activat
 #### Appearance (Widgets)
 Add only two widgets to keep it as simple as possible.
 
-  #### Primary widget
+##### Primary widget
   * Add the Mailchimp signup form widget and name it something like "Join our Newsletter"
 
   #### bbPress widget
