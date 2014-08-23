@@ -20,7 +20,10 @@ After installing Wordpress, install the following plugins and themes and activat
 #### Appearance (Widgets)
 Add only two widgets to keep it as simple as possible.
 
-  ##### bbPress widget
+  #### Primary widget
+  * Add the Mailchimp signup form widget and name it something like "Join our Newsletter"
+
+  #### bbPress widget
   * Add the bbPress login widget at the top and title it something like "Forum Login" so that it works when both logged in or out. Leave other URIs blank.
   * Add a text widget immediately below with a blank title and the following code:
 
@@ -30,8 +33,6 @@ Add only two widgets to keep it as simple as possible.
 
   * Add the Mailchimp signup form widget and name it something like "Join our Newsletter"
   
-  #### Primary widget
-  * Add the Mailchimp signup form widget and name it something like "Join our Newsletter"
 
 #### Appearance (Menus)
 * Create a new menu and name it something like "Main". On **Menu settings** at the bottom, add it to the Theme locations **Primary** and **Save** it.
