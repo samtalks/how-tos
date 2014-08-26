@@ -1,4 +1,4 @@
-# Setting up Wordpress with forums
+# Setup Social WP 1: bbPress, Nudie, Mailchimp
 
 This is a typical setup of wordpress I'd like to use to get going.
 
@@ -113,4 +113,3 @@ Uncheck the following:
 </p>
 ```
 
-[more to come]
