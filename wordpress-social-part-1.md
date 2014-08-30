@@ -7,6 +7,8 @@ After installing Wordpress, install the following plugins and themes and activat
 * [Simple custom CSS plugin](https://wordpress.org/plugins/simple-custom-css/screenshots/) (Make sure to backup your css frequently)
 * [Mailchimp for wordpress plugin](http://wordpress.org/plugins/mailchimp-for-wp/) (Don't accept immitations!)
 * [Nudie theme](http://nudiewp.com/) (It's around $50).
+* [bbP last post](https://wordpress.org/plugins/bbp-last-post/)
+* [bbP private groups](https://wordpress.org/plugins/bbp-private-groups/)
 
 ## Pages
 To have a separate forum section, create these pages at a minimum: **Home, Blog, Forums**
@@ -69,8 +71,7 @@ Add only two widgets to keep it as simple as possible.
 	```
 
 ##### Appearance (Editor) - add Credit to Footer
-Edits the footer to add your design credits and link to website.
-Make the change to the bottom of `footer.php`.
+* Edits the footer to add your design credits and link to website. Make the change to the bottom of `footer.php`.
 
 Wrap this part of code:
 ```php
@@ -90,7 +91,7 @@ AND INSERT YOUR COMPANY CREDITS BELOW
 ```
 
 ##### Appearance (Editor) - hide ugly user in topics
-bbPress by default clutters up the forums page and topics page with the original poster's user image and name and the last updater's user image and name. Do this to your files to remove those elements.
+* bbPress by default clutters up the forums page and topics page with the original poster's user image and name and the last updater's user image and name. Do this to your files to remove those elements.
 
 In the `loop-topics.php` file, hide this section like so:
 ```php
@@ -131,6 +132,13 @@ Uncheck the following:
 	* "Allow users to mark topics as favorites"
 	* "Allow users to subscribe to forums and topics"
 	* In **Forum Root Slug**, uncheck "Prefix all forum content with the forum root slug". This prevents the "Home/Forums/Forum/..." redundancy in the breadcrumbs.
+
+##### Settings (bbP last post)
+* Name the column something short like "Updated" to fit on a phone.
+
+##### Settings (bbP private groups)
+* Keep the forum visibility unchecked.
+
 
 ## Mailchimp for WP
 
