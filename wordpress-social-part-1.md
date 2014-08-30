@@ -90,8 +90,8 @@ AND INSERT YOUR COMPANY CREDITS BELOW
                         Copyright &copy; 2014 CLIENT_WEBSITE   &emsp;&emsp;  By <a href="http://YOUR_SITE" target="_blank">YOUR SITE</a>
 ```
 
-##### Appearance (Editor) - hide ugly user in topics
-* bbPress by default clutters up the forums page and topics page with the original poster's user image and name and the last updater's user image and name. Do this to your files to remove those elements.
+##### Appearance (Editor) - hide "voice count"
+* bbPress by default clutters up the topics page with a "voice count" collumn. Do this to your files to remove those elements.
 
 In the `loop-topics.php` file, hide this section like so:
 ```php
