@@ -108,7 +108,7 @@ In the `loop-single-topic.php` file, hide this section like so:
 ##### Settings (General)
 * Check on "Anyone can register" for **Membership**.
 * During the summer, set **UTC** to EDT (Eastern Daylight Time) which is "UTC-4".  During the winter, set to EST (Eastern Savings Time) which is "UTC-5".
-* Set the date and time format to:  `M j, 'y`  for "Jan 1, '14" output.
+* Set the date and time format to:  `n-j-y`  for "1-1-14" output.
 
 ##### Settings (Reading)
 **Front page displays** set to "static page" with "Front page" set to "Home" and "Posts page" set to "Blog".
