@@ -42,7 +42,7 @@ Add only two widgets to keep it as simple as possible.
 ##### Appearance (Custom CSS)
 * Add your custom CSS. Make sure you frequently save and version control (i.e., on Git) your ever changing CSS file since this plugin does not save versions or backups.
 
-##### Appearance (Editor)
+##### Appearance (Editor) - fix wrong forum menu highlight
 * This one is important. There is a bug with the bbpress plugin that allows Wordpress to highlight the wrong menu item when the forum sub-items and topics are selected. To fix this, add the following code at the bottom of the `ThemeFunctions` (`functions.php`) file. Make sure to substitute `'forum'`, `'topic'` and `'menu-item-16'` in the first script to whatever is correct. 
 
 	```php
@@ -68,7 +68,7 @@ Add only two widgets to keep it as simple as possible.
 	add_action( 'login_enqueue_scripts', 'my_login_logo' );
 	```
 
-##### Appearance (add Credit to Footer)
+##### Appearance (Editor) - add Credit to Footer
 Edits the footer to add your design credits and link to website.
 Make the change to the bottom of `footer.php`.
 
@@ -87,6 +87,18 @@ AND INSERT YOUR COMPANY CREDITS BELOW
                         -->
 
                         Copyright &copy; 2014 CLIENT_WEBSITE   &emsp;&emsp;  By <a href="http://YOUR_SITE" target="_blank">YOUR SITE</a>
+```
+
+##### Appearance (Editor) - hide ugly user in topics
+bbPress by default clutters up the forums page and topics page with the original poster's user image and name and the last updater's user image and name. Do this to your files to remove those elements.
+
+In the `loop-topics.php` file, hide this section like so:
+```php
+<!--HIDE	<th class="bbp-topic-voice-count"><?php _e( 'Voices', 'bbpress' ); ?></th> -->
+```
+In the `loop-single-topic.php` file, hide this section like so:
+```php
+<!--HIDE	<td class="bbp-topic-voice-count"><?php bbp_topic_voice_count(); ?></td>  -->
 ```
 
 
