@@ -8,16 +8,16 @@ After installing Wordpress, install the following plugins and themes and activat
 * [Mailchimp for wordpress plugin](http://wordpress.org/plugins/mailchimp-for-wp/) (Don't accept immitations!)
 * [Nudie theme](http://nudiewp.com/) (It's around $50).
 
-### Pages
+## Pages
 To have a separate forum section, create these pages at a minimum: **Home, Blog, Forums**
 
-### Forums
+## Forums
 Create a main forum section with all defaults selected. Call it anything you'd like.
 
-### Topics
+## Topics
 Create a topic with defaults selected except: nest it under the forum you just created above.
 
-### Appearance
+## Appearance
 Add only two widgets to keep it as simple as possible.
 
 ##### Appearance (Widgets)
@@ -68,7 +68,29 @@ Add only two widgets to keep it as simple as possible.
 	add_action( 'login_enqueue_scripts', 'my_login_logo' );
 	```
 
-### Settings
+##### Appearance (add Credit to Footer)
+Edits the footer to add your design credits and link to website.
+Make the change to the bottom of `footer.php`.
+
+Wrap this part of code:
+```php
+				<?php echo apply_atomic_shortcode( 'footer_content', hybrid_get_setting( 'footer_insert' ) ); ?>
+```
+
+
+
+With other code this:
+```php
+                        <!-- HIDE DEFAULT FOOTER
+				<?php echo apply_atomic_shortcode( 'footer_content', hybrid_get_setting( 'footer_insert' ) ); ?>
+AND INSERT YOUR COMPANY CREDITS BELOW
+                        -->
+
+                        Copyright &copy; 2014 CLIENT_WEBSITE   &emsp;&emsp;  By <a href="http://YOUR_SITE" target="_blank">YOUR SITE</a>
+```
+
+
+## Settings
 
 ##### Settings (General)
 * Check on "Anyone can register" for **Membership**.
@@ -98,7 +120,7 @@ Uncheck the following:
 	* "Allow users to subscribe to forums and topics"
 	* In **Forum Root Slug**, uncheck "Prefix all forum content with the forum root slug". This prevents the "Home/Forums/Forum/..." redundancy in the breadcrumbs.
 
-### Mailchimp for WP
+## Mailchimp for WP
 
 ##### Mailchimp settings
 * First create a Mailchimp account, create a list, add then return to Wordpress admin site to add the API.  
