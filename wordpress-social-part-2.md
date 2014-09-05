@@ -1,8 +1,15 @@
 # Setup Social WP 2: Facebook, Group-based Permissions
 
 Here are the plugins we will install:
-* [Nextend Facebook connect](http://wordpress.org/plugins/nextend-facebook-connect/screenshots/). This enables one-click registration with facebook. 
+* [Wordpress backup](http://wordpress.org/support/view/plugin-reviews/backupwordpress)
 
+
+### [Wordpress backup](http://wordpress.org/support/view/plugin-reviews/backupwordpress)
+This is a highly rated backup tool that I found simple and useful. Install this plugin and set the schedules. That's it.
+
+
+
+[Nextend Facebook connect](http://wordpress.org/plugins/nextend-facebook-connect/screenshots/). This enables one-click registration with facebook. 
 
 
 
