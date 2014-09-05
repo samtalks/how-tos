@@ -25,6 +25,12 @@ If you make the above mistake, refer to [this wordpress doc](http://codex.wordpr
 
 ### Restoring from a snapshot
 
-You can restore from snapshots. If you do, keep in mind that doing this
+You can restore from snapshots. If you do, keep in mind that doing this will cause at least 15 minutes of downtime, depending on the size of your droplet and snapshots.
+
+1. First, make sure you've created snapshots of everything you need.
+2. Go to your active droplet and Destroy it. Do so without Scrubbing the data (this is faster. Scrubbing is for extra security). Once you start this process, it will take at least 15 minutes or so while the website starts to go down.
+3. Once the droplet is completely gone, create a new one using a snapshot. This part is much faster. 
+4. Once this is done, update your ssh by going to your terminal  `cd ~/.shh` and then `subl known_hosts`. Remove the previous host ssh key.
+5. Go to `ssh root@YOUR_DOMAIN` and follow directions to create a new known host key.
 
 
