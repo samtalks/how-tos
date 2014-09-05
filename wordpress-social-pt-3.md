@@ -2,7 +2,7 @@
 
 ### If you are managing multiple snapshots of different apps on a single droplet...
 
-Follow these directions, they are adapted from [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean)
+Follow these directions, they are adapted from [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean). The comments are also very helpful.
 
 1. In your domain registrar (e.g., Godaddy), go to the nameservers and add custom nameservers:
   * ns1.digitalocean.com
