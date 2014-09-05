@@ -1,6 +1,6 @@
 # Connecting DNS nameservers
 
-### If you are managing multiple snapshots of different apps on a single droplet...
+### Setting up domain name for URL
 
 Follow these directions, they are adapted from [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean). The comments are also very helpful.
 
@@ -23,6 +23,8 @@ You must do the above together - doing only the first will not allow you to log 
 
 If you make the above mistake, refer to [this wordpress doc](http://codex.wordpress.org/Changing_The_Site_URL) to fix the solution from within the database. Fixing it from wp-config.php file is only a temporary solution.
 
+### Restoring from a snapshot
 
+You can restore from snapshots. If you do, keep in mind that doing this
 
 
