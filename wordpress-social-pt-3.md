@@ -1,6 +1,6 @@
-# Connecting DNS nameservers
+# Setup DNS nameservers, MX records
 
-### Setting up domain name for URL
+### 1. Setting up domain name for URL
 
 Follow these directions, they are adapted from [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean). The comments are also very helpful.
 
@@ -8,7 +8,10 @@ Follow these directions, they are adapted from [here](https://www.digitalocean.c
   * ns1.digitalocean.com
   * ns2.digitalocean.com
   * ns3.digitalocean.com
-  This will now take a few hours to propagate. Now we have to do stuff on DigitalOcean's end. **WARNING: Doing this will disable web access from anywhere from a few hours to 48 hours.**
+
+  This will now take a few hours to propagate. Now we have to do stuff on DigitalOcean's end. 
+  
+  **WARNING:** Doing so will disable web access from anywhere from a few hours to 48 hours.
 2. In DigitalOcean, click on the **DNS** button on the left nav panel.
 3. Click on the big blug **ADD DOMAIN** button.
 4. On the right dropdown, select your droplet. By doing so, the IP address in the center will automatically fill in. 
@@ -23,7 +26,8 @@ You must do the above together - doing only the first will not allow you to log 
 
 If you make the above mistake, refer to [this wordpress doc](http://codex.wordpress.org/Changing_The_Site_URL) to fix the solution from within the database. Fixing it from wp-config.php file is only a temporary solution.
 
-### Restoring from a snapshot
+
+### 2. Restoring from a snapshot
 
 You can restore from snapshots. If you do, keep in mind that doing this will cause at least 15 minutes of downtime, depending on the size of your droplet and snapshots.
 
@@ -32,5 +36,24 @@ You can restore from snapshots. If you do, keep in mind that doing this will cau
 3. Once the droplet is completely gone, create a new one using a snapshot. This part is much faster. 
 4. Once this is done, update your ssh by going to your terminal  `cd ~/.shh` and then `subl known_hosts`. Remove the previous host ssh key.
 5. Go to `ssh root@YOUR_DOMAIN` and follow directions to create a new known host key.
+
+
+### 3. Setting up MX records
+
+Once you transfer nameservers to DigitalOcean, DigitalOcean takes over the management of all records including MX records. If you've changed nameservers from Godaddy, you might get this confused because Godaddy's management interface still allows you to make changes to those records. However, changes you make in Godaddy will *not* propagate. 
+
+So, let's set up MX records. Here are the tools you will need to check what your MX records are displayed as. 
+
+* Check MX records here: [MXtoolbox](http://mxtoolbox.com/)
+* Or, better yet, if you use Google Apps for email, use [Google's toolbox](https://toolbox.googleapps.com/apps/checkmx/check?from=support.google.com&origin=checkmx-widget&domain=coalitionedu.org). They provide detailed instructions on how to correct errors (some of which we'll add here).
+
+1. When you're ready, set up MX records in DigitalOcean. If using Google Apps, simple click the Google MX shortcut button. However, as of this writing, DigitalOcean's fill in of the MX records are slightly off from Google's documentation. (Basically, any occurrence of "googlemail" in DigitalOcean's tool should be replaced with "google"). 
+
+2. Set up an SPF record by following [These DigitalOcean instructions](https://www.digitalocean.com/community/tutorials/how-to-create-a-spf-record-for-your-domain-with-google-apps)
+
+3. It's recommended you set up DKIM and DMARC as well, but setting those up is a very involved process. There may be a easier solution in the future. 
+
+
+
 
 
