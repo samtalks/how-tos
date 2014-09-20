@@ -17,8 +17,6 @@ sudo apt-get install php5-curl
 sudo /etc/init.d/apache2 restart
 ```
 
-Here's the stuff for [Google Analytics](http://
-
-* premium.wpmudev.org/blog/how-to-add-google-analytics-to-wordpress-in-under-60-seconds/)
+Here's the stuff for [Google Analytics](http://premium.wpmudev.org/blog/how-to-add-google-analytics-to-wordpress-in-under-60-seconds/)
 
 
