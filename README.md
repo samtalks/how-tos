@@ -71,7 +71,7 @@ Adapted from the following sources:
   * Go to your hostname (or IP address) on your browser and enter "admin" and the password you copied onto your notepad from earlier to log in. Fill in the form, create WP credentials, and installation should be successful.
   * Log in using your new credentials. Voila.
 5. You also have access to SQL in your SSH session. To access SQL during your SSH session, you can get your password by: `$ cat /root/.my.cnf` 
-6. Remove the "authentication.. restricted area" login window. 
+6. Remove the "authentication.. restricted area" login window. Wp-admin may not allow you to log in from another computer or browser. You'll get a window that states "Unauthorized ... This server could not verify that you are authorized to access the document requested. Either you supplied the wrong credentials (e.g., bad password), or your browser doesn't understand how to supply the credentials required."  In this case you have to do the following:
   * `$ nano /etc/apache2/apache2.conf`
   * `CTRL` + ` W ` and search for "wp-admin".
   * Put a "#" in front of every line below:
