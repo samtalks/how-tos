@@ -39,7 +39,7 @@ Adapted from the following sources:
     Host key verification failed.
     ```
 
-    Delete the "offending" line from your `~/.ssh/known_hosts` file and then try again.
+    Delete the "offending" line from your `~/.ssh/known_hosts` file and then try again. You can track down the offending file by looking for the ip addresses at the begining of each known_host key. Often you'll find a conflicting ip address that was already used. 
   * Now you should get something like this:
 
     ```
